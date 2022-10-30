@@ -1,0 +1,19 @@
+/* .rofik{
+    font-size: 50px;
+    font-family: cursive;
+    font-weight: bold;
+    font-style: italic;
+} */
+
+/* 
+#wrapper p{
+    color: red;
+} */
+
+
+.bg-img{
+    background: url(./bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; dde
+}
