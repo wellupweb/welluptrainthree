@@ -1,0 +1,10 @@
+.box_1{
+    background: red;
+    padding: 30px;
+    float: left;
+}
+.box_2{
+    background: green;
+    padding: 30px;
+    float: right; 
+}
