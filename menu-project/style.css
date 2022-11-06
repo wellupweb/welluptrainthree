@@ -1,0 +1,14 @@
+#menu_project{
+    list-style-type: none;
+    padding: 0;
+}
+#menu_project li{
+    display: inline;
+}
+
+#menu_project li a{
+    text-decoration:none;
+    color: yellowgreen;
+    background: #eee;
+    padding: 8px 25px;
+}
