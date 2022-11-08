@@ -1,14 +1,33 @@
-#menu_project{
+ #menu_project{
     list-style-type: none;
     padding: 0;
+    width: 960px;
+    background: #eee;
+    height:34px;
 }
 #menu_project li{
-    display: inline;
+    /* display: inline;  */
+    float: left;
+    border-right: 2px solid yellowgreen
 }
+
+#menu_project li:last-child{
+    border-right:none;
+}
+
 
 #menu_project li a{
     text-decoration:none;
     color: yellowgreen;
     background: #eee;
     padding: 8px 25px;
+    
+    display: block;
+    transition: all 0.3s ease-out;
 }
+
+#menu_project li a:hover{
+    background: rgb(144, 123, 123);
+} 
+
+
