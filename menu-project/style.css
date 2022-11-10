@@ -1,14 +1,15 @@
  #menu_project{
     list-style-type: none;
     padding: 0;
-    width: 960px;
+    width: 1200px;
     background: #eee;
     height:34px;
 }
 #menu_project li{
     /* display: inline;  */
     float: left;
-    border-right: 2px solid yellowgreen
+    position: relative;
+    /* border-right: 2px solid yellowgreen */
 }
 
 #menu_project li:last-child{
@@ -30,4 +31,33 @@
     background: rgb(144, 123, 123);
 } 
 
+#menu_project li ul li{
+    float:none;
+}
 
+#menu_project li ul{
+    list-style-type: none;
+    padding:0;
+    position: absolute;
+    left: 9999px;
+    /* display:none; */
+}
+
+#menu_project li:hover ul{
+    /* display: block; */
+    left: 0;
+}
+
+/* span{
+    background: red;
+    color: white;
+    position: absolute;
+    right: 0;
+}
+
+.box{
+    width: 500px;
+    height: 400px;
+    background: yellow;
+    position: relative;
+} */
