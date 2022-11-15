@@ -32,3 +32,51 @@ header p{
 header:hover{
     background: brown;
 }
+
+nav{
+
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    background: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav ul li {
+    /* float: left; */
+    width: 80px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: aqua;
+    background: gray;
+    padding: 10px 20px;
+    display: block
+}
+#banner img{
+    width: 100%;
+}
+
+
+
+
+/* .box{
+    height: 400px;
+    width: 600px;
+    background: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} */
+    /*
+.box h2{
+ background: yellow; 
+    padding: 10px;
+}
+*/
