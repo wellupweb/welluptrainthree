@@ -80,3 +80,45 @@ nav ul li a{
     padding: 10px;
 }
 */
+
+#content_wrapper{
+    display:flex;
+}
+
+#content{
+    width: 600px;
+    background: aliceblue;
+    padding: 20px;
+}
+
+aside{
+    width: 360px;
+    background: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items:center
+}
+
+aside ul{
+    padding:0;
+    list-style-type: none;
+}
+
+aside ul li{
+    background: aqua;
+    padding: 10px 30px;
+    border-bottom: 1px solid black
+}
+
+aside ul li:first-child{
+    background: greenyellow;
+    font-weight: bold;
+} 
+
+footer{
+    text-align: center;
+    background: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+}
