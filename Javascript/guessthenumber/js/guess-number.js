@@ -1,6 +1,5 @@
 var currentNumber = generateRandomNumber();
-
-console.log(currentNumber)
+var guesses = [];
 
 
 
@@ -22,10 +21,18 @@ function play(){
 
     if(currentNumber > guessNumber){
         console.log("Too low");
+        document.getElementById('result').innerHTML = `<div class='alert alert-warning' role="alert">Too Low</div>`;
     }else if ( currentNumber < guessNumber){
         console.log("Too High")
+        document.getElementById('result').innerHTML = `<div class='alert alert-danger' role="alert">Too High</div>`;
     }else{
         console.log("You Won")
+        document.getElementById('result').innerHTML = `<div class='alert alert-success' role="alert">You Won</div>`;
+
     }
+
+    guesses.push(guessNumber);
+
+    console.log(guesses);
 
 }
