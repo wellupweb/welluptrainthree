@@ -1,5 +1,7 @@
 var currentNumber = generateRandomNumber();
 
+console.log(currentNumber)
+
 
 
 function generateRandomNumber(){
@@ -14,7 +16,9 @@ document.getElementById("check-number").addEventListener('click',play)
 
 
 function play(){
-    var guessNumber = document.getElementById("number-guess").value ;
+    var guessValue = document.getElementById("number-guess").value ;
+
+    var guessNumber = parseInt(guessValue) // "34" to 34
 
     if(currentNumber > guessNumber){
         console.log("Too low");
