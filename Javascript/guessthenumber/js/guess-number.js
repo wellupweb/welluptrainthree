@@ -4,6 +4,7 @@ var guesses = [];
 
 
 function generateRandomNumber(){
+
     var randomNumber = Math.random() * 100; // 12.123423 
 
     var exactRandomNumber = Math.floor(randomNumber);
@@ -33,6 +34,23 @@ function play(){
 
     guesses.push(guessNumber);
 
-    console.log(guesses);
+    displayHistory();
+ 
+
 
 }
+
+function displayHistory(){
+    let i = 0;
+    let list = `<ul class="list-group">`;
+    while (i < guesses.length) {
+        console.log(guesses[i]);
+        list += `<li class="list-group-item"> You Guessed ${guesses[i]}</li>`
+        i++;
+    }
+    list += `</ul>`
+
+    document.getElementById('history').innerHTML = list;
+}
+
+
