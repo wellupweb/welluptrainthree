@@ -13,12 +13,25 @@ function generateRandomNumber(){
 }
 
 document.getElementById("check-number").addEventListener('click',play)
+document.getElementById("reset-number").addEventListener('click',resetGame)
+
+function resetGame(){
+    currentNumber = generateRandomNumber();
+    document.getElementById("number-guess").value = "";
+    document.getElementById("result").innerHTML = "";
+    guesses = [];
+    displayHistory();
+
+}
 
 
 function play(){
+    debugger;
+
     var guessValue = document.getElementById("number-guess").value ;
 
     var guessNumber = parseInt(guessValue) // "34" to 34
+
 
     if(currentNumber > guessNumber){
         console.log("Too low");
