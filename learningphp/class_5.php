@@ -1,3 +1,12 @@
+<?php
+    // $firstname = $_GET['fname'];
+    // $lastname = $_GET['lname'];
+
+    $firstname = $_POST['fname'];
+    $lastname = $_POST['lname'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,13 +42,22 @@
     <br>
 
     <h5>FORM WITH GET METHOD</h5>
-    <form action="test.php" method="GET">
+    <h2>First name: <?php //echo $firstname; ?></h2>
+    <h2>last name: <?php //echo $lastname; ?></h2>
+    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="GET">
         <input type="text" name="fname" >
         <input type="text" name="lname" >
         <input type="submit">
     </form>
 
     <h5> Form With POST METHOD</h5>
+    <h2>First name: <?php echo $firstname; ?></h2>
+    <h2>last name: <?php echo $lastname; ?></h2>
+    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
+        <input type="text" name="fname" >
+        <input type="text" name="lname" >
+        <input type="submit">
+    </form>
 
     
 
