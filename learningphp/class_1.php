@@ -11,9 +11,10 @@
 
 
     <h2> Echo </h2>
-    <?php echo $footaball; ?>
+    <?php echo "Bangladesh is amazing"; ?>
     <br>
     <?php echo 40; ?>
+
     
     <h2>Print_r</h2> 
         <pre>
@@ -49,7 +50,8 @@
 
     <h2>Array</h2>
     <?php
-        $country = array("brazil","Argentina");
+    
+        $country = array(50,"Argentina");
         var_dump($country);
     ?>
 
@@ -71,7 +73,15 @@
         $car2->color = "gray" . "<br>";
         echo $car2->color . "<br>";
         echo $car2->drive();
+
+
+       
     ?>
 
+    <h4>Boolean</h4>
+    <?php var_dump(true) ?>
+    <?php var_dump(false) ?>
+
+   
 </body>
 </html>
