@@ -1,9 +1,25 @@
 <?php 
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $email = $_POST['email'];
-    $website = $_POST['website'];
-    $comment = $_POST['comment'];
+    $firstname = "";
+    $lastname = "";
+    $email = "";
+    $website = "";
+    $comment = "";
+    if($_SERVER["REQUEST_METHOD"] ==  "POST"){
+        $firstname = validate($_POST['firstname']) ;
+        $lastname = validate($_POST['lastname']);
+        $email = validate($_POST['email']);
+        $website = validate($_POST['website']);
+        $comment = validate($_POST['comment']);
+    }
+
+    function validate($data){
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    
 
 ?>
 
@@ -40,7 +56,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="lastname" class="form-label">Last Name</label>
+                <label for="lastname" class="form-label">Last Name &copy;</label>
                 <input type="text" class="form-control" id="lastname" name="lastname">
             </div>
 
