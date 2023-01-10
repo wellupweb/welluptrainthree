@@ -7,6 +7,24 @@
     <title>Document</title>
 </head>
 <body>
+    <?php 
+      // $countries = array("name" => "Arman", "age" => 23);
+
+    // var countries = {
+    //     name : 'Arman',
+    //     age : "23"
+    // }
+
+    // countries.name
+    // var_dump($countries['age']);
+    // if(empty($countries["name"])){
+    //     echo "Its empty";
+    // }else{
+    //     echo "Its not empty";
+    // }
+
+    // die();
+    ?>
     <h2>Hello world</h2>
 </body>
 </html>
