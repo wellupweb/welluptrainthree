@@ -1,13 +1,16 @@
 <?php 
     include "Calculator.php";
     $sum = "";
+    $multi = "";
+    $divide = "";
+    $subs = "";
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $numberone = $_POST['numberone'];
         $numbertwo = $_POST['numbertwo'];
 
-        $calculator = new Calculator();
-        $sum = $calculator->add($numberone,$numbertwo);
-    
+        $calculator = new Calculator($numberone,$numbertwo);
+       
+        $sum = $calculator->add();
 
     }
 
@@ -42,6 +45,9 @@
         </form>
 
         <h2 class="text-center bg-warning text-white"><?php echo $sum ; ?></h2>
+        <h2 class="text-center bg-warning text-white"><?php echo $multi ; ?></h2>
+        <h2 class="text-center bg-warning text-white"><?php echo $divide ; ?></h2>
+        <h2 class="text-center bg-warning text-white"><?php echo $subs ; ?></h2>
     </div>    
 
 
