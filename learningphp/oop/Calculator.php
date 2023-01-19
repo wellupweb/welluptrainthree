@@ -12,6 +12,7 @@
         
         public function add(){
             $sum = $this->num1 + $this->num2;
+            $this->multi();
             return $sum;
 
         } 

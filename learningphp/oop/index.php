@@ -9,8 +9,13 @@
         $numbertwo = $_POST['numbertwo'];
 
         $calculator = new Calculator($numberone,$numbertwo);
-       
-        $sum = $calculator->add();
+       $calculator->num1;
+        // $sum = $calculator->add();
+
+        $calculatortwo = new Calculator(400,500);
+        $calculatortwo->num1;
+        $calculatortwo->add();
+        $calculatortwo->multi();
 
     }
 
