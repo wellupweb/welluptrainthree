@@ -1,14 +1,37 @@
-<?php 
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $firstname = $_POST["firstname"];
-        $lastname = $_POST["lastname"];
+<?php
+$link = new mysqli("localhost", "root", "", "scholify");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $firstname = $_POST["firstname"];
+    $lastname = $_POST["lastname"];
 
-        $link = new mysqli("localhost","root","","scholify");
-        $insert_row = $link->query("insert into student(firstname,lastname) values('$firstname','$lastname')");
-        if($insert_row){
-            echo "Data inserted Successfully";
-        }
+    $insert_row = $link->query("insert into student(firstname,lastname) values('$firstname','$lastname')");
+    if ($insert_row) {
+        echo "Data inserted Successfully";
     }
+}
+
+$table_data = $link->query("select * from student");
+
+echo "<pre>";
+// $stu = $table_data->fetch_all();
+// var_dump($stu[5][1]);
+echo "<br>";
+// var_dump($table_data->fetch_array());
+// echo "<br>";
+// $stu = $table_data->fetch_assoc();
+// var_dump($stu['firstname']);
+
+// var_dump($table_data->fetch_assoc());
+// var_dump($table_data->fetch_assoc());
+// var_dump($table_data->fetch_assoc());
+// var_dump($table_data->fetch_assoc());
+// var_dump($table_data->fetch_assoc());
+// var_dump($table_data->fetch_assoc());
+// var_dump($table_data->fetch_assoc());
+echo "</pre>";
+
+// die();
+
 
 
 ?>
@@ -41,6 +64,29 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                $i = 0;
+                while($result = $table_data->fetch_assoc()) { 
+                $i++;    
+                ?>
+                <tr>
+                    <th scope="row"><?php echo $i; ?></th>
+                    <td><?php echo $result['firstname']; ?></td>
+                    <td><?php echo $result['lastname']; ?></td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
     </div>
 </body>
 
