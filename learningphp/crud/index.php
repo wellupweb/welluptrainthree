@@ -69,8 +69,10 @@ echo "</pre>";
             <thead>
                 <tr>
                     <th scope="col">#</th>
+                    <th scope="col">id</th>
                     <th scope="col">First</th>
                     <th scope="col">Last</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -81,8 +83,13 @@ echo "</pre>";
                 ?>
                 <tr>
                     <th scope="row"><?php echo $i; ?></th>
+                    <td><?php echo $result['id']; ?></td>
                     <td><?php echo $result['firstname']; ?></td>
                     <td><?php echo $result['lastname']; ?></td>
+                    <td>
+                        <a href="edit.php?student_id=<?php echo $result['id'];  ?>" class="btn btn-success">Edit</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
+                    </td>
                 </tr>
                 <?php } ?>
             </tbody>
